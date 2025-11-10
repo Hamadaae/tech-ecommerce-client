@@ -4,6 +4,7 @@ import { Product } from '../models/product.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PaginationMeta } from '../../store/products/product.models';
+import { environment } from '../../../environments/environment';
 
 export interface PaginatedProductsResponse {
   data: Product[];
@@ -12,7 +13,7 @@ export interface PaginatedProductsResponse {
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  private apiUrl = '/api/products';
+  private apiUrl = `${environment.apiUrl}/products`;
 
   constructor(private http: HttpClient) {}
 

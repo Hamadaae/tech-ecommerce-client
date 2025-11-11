@@ -1,7 +1,7 @@
-﻿{
+{
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/browser/browser",
+  "buildCommand": "cd client && npm run build",
+  "outputDirectory": "client/dist/browser/browser",
   "rewrites": [
     {
       "source": "/(.*)",
